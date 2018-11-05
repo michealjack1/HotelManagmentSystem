@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GuestController">
+   <children>
+      <ImageView fx:id="img_exist_guest" fitHeight="150.0" fitWidth="200.0" layoutX="401.0" layoutY="66.0" onMousePressed="#exist_guest" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/details.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img_new_guest" fitHeight="150.0" fitWidth="200.0" layoutX="66.0" layoutY="66.0" onMousePressed="#new_guest" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/addNewGuest.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="97.0" layoutY="248.0" text="new guest">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="428.0" layoutY="248.0" text="Edit Guest info">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btn_back" layoutX="97.0" layoutY="327.0" onAction="#back" text="Back">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn_cancel" layoutX="436.0" layoutY="327.0" onAction="#cancel" text="cancel">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+   </children>
+</Pane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="566.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BookingController">
+   <children>
+      <Pane prefHeight="383.0" prefWidth="571.0" style="-fx-background-color: #a5a9be;">
+         <children>
+            <JFXComboBox fx:id="cb_room_type" layoutX="201.0" layoutY="70.0" onAction="#room_type" prefHeight="26.0" prefWidth="198.0" />
+            <JFXComboBox fx:id="cb_room_available" layoutX="201.0" layoutY="161.0" onAction="#choise_room" prefHeight="26.0" prefWidth="198.0" />
+            <ImageView fx:id="back_frame" fitHeight="77.0" fitWidth="76.0" layoutX="56.0" layoutY="277.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/back.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="next_frame" fitHeight="77.0" fitWidth="76.0" layoutX="451.0" layoutY="277.0" nodeOrientation="INHERIT" onDragDetected="#next" onMouseClicked="#next" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="pane" prefHeight="383.0" prefWidth="571.0">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="566.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/backgroungBoking.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

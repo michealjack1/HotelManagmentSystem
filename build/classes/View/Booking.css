@@ -1,0 +1,11 @@
+
+#pane1{
+    -fx-background-size:600px 600px;
+    -fx-background-repeat:no-repeat;
+    -fx-background-image: url("../Images/booking.jpg");
+}
+#root{
+    -fx-background-size:600px 422px;
+    -fx-background-repeat:no-repeat;
+    -fx-background-image : url("../Images/startImage.jpg"); 
+}
