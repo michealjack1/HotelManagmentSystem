@@ -16,7 +16,7 @@ public class HotelManagmentSystem extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("start.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("Reservation.fxml"));
             Scene s = new Scene(parent);
             primaryStage.setScene(s);
             primaryStage.show();

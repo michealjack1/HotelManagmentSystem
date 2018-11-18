@@ -15,17 +15,17 @@
    <children>
       <Pane layoutX="14.0" layoutY="14.0" prefHeight="283.0" prefWidth="493.0" style="-fx-border-color: black;">
          <children>
-            <JFXTextField layoutX="18.0" layoutY="24.0" promptText="First name" />
-            <JFXTextField layoutX="308.0" layoutY="24.0" promptText="Last name" />
-            <JFXTextField layoutX="14.0" layoutY="74.0" maxWidth="218.0" minWidth="218.0" prefHeight="32.0" prefWidth="218.0" promptText="ID" />
-            <JFXRadioButton layoutX="153.0" layoutY="147.0" text="Male" />
-            <JFXRadioButton layoutX="264.0" layoutY="147.0" text="Female" />
+            <JFXTextField fx:id="tf_first" layoutX="18.0" layoutY="24.0" maxWidth="218.0" minWidth="218.0" prefHeight="32.0" prefWidth="218.0" promptText="First name" />
+            <JFXTextField fx:id="tf_last" layoutX="308.0" layoutY="24.0" promptText="Last name" />
+            <JFXTextField fx:id="tf_id" layoutX="14.0" layoutY="74.0" maxWidth="218.0" minWidth="218.0" prefHeight="32.0" prefWidth="218.0" promptText="ID" />
+            <JFXRadioButton fx:id="rd_male" layoutX="153.0" layoutY="147.0" text="Male" />
+            <JFXRadioButton fx:id="rd_female" layoutX="264.0" layoutY="147.0" text="Female" />
             <Label layoutX="31.0" layoutY="145.0" text="Gender : ">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <JFXTextField focusColor="#405aa800" layoutX="188.0" layoutY="198.0" maxWidth="208.0" minWidth="170.0" prefHeight="69.0" prefWidth="208.0" style="-fx-border-color: black;" unFocusColor="#4d4d4d00" />
+            <JFXTextField fx:id="tf_address" focusColor="#405aa800" layoutX="188.0" layoutY="198.0" maxWidth="208.0" minWidth="170.0" prefHeight="69.0" prefWidth="208.0" style="-fx-border-color: black;" unFocusColor="#4d4d4d00" />
             <Label layoutX="31.0" layoutY="222.0" text="Adress">
                <font>
                   <Font size="16.0" />
@@ -50,25 +50,25 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <JFXComboBox layoutX="288.0" layoutY="31.0" prefHeight="26.0" prefWidth="170.0" />
+            <JFXComboBox fx:id="cb_country" layoutX="288.0" layoutY="31.0" prefHeight="26.0" prefWidth="170.0" />
             <Label layoutX="34.0" layoutY="113.0" text="Status  :">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <JFXComboBox layoutX="288.0" layoutY="110.0" prefHeight="26.0" prefWidth="170.0" />
+            <JFXComboBox fx:id="cb_status" layoutX="288.0" layoutY="110.0" prefHeight="26.0" prefWidth="170.0" />
             <Label layoutX="21.0" layoutY="177.0" text="Number Of Children">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="288.0" layoutY="171.0" />
             <Label layoutX="26.0" layoutY="228.0" text="Number Of Adult ">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="288.0" layoutY="222.0" />
+            <JFXTextField fx:id="tf_number_children" layoutX="288.0" layoutY="171.0" />
+            <JFXTextField fx:id="tf_number_adult" layoutX="288.0" layoutY="222.0" />
          </children>
       </Pane>
       <Pane layoutX="14.0" layoutY="327.0" prefHeight="125.0" prefWidth="493.0" style="-fx-border-color: black;">
@@ -83,13 +83,13 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="220.0" layoutY="14.0" maxWidth="233.0" minWidth="233.0" prefHeight="32.0" prefWidth="233.0" />
+            <JFXTextField fx:id="tf_email" layoutX="220.0" layoutY="14.0" maxWidth="233.0" minWidth="233.0" prefHeight="32.0" prefWidth="233.0" />
             <Label layoutX="25.0" layoutY="70.0" prefHeight="32.0" prefWidth="67.0" text="Phone">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="220.0" layoutY="70.0" maxWidth="233.0" minWidth="233.0" prefHeight="32.0" prefWidth="233.0" />
+            <JFXTextField fx:id="tf_phone" layoutX="220.0" layoutY="70.0" maxWidth="233.0" minWidth="233.0" prefHeight="32.0" prefWidth="233.0" />
          </children>
       </Pane>
       <Pane layoutX="552.0" layoutY="327.0" prefHeight="200.0" prefWidth="472.0" style="-fx-border-color: black;">
@@ -99,13 +99,13 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <JFXComboBox layoutX="140.0" layoutY="22.0" prefHeight="26.0" prefWidth="79.0" />
-            <Label layoutX="252.0" layoutY="25.0" text="Room Type :">
+            <JFXComboBox fx:id="cb_room_type" layoutX="140.0" layoutY="22.0" onMouseClicked="#room_available" prefHeight="26.0" prefWidth="79.0" />
+            <Label layoutX="236.0" layoutY="25.0" text="Room Number :">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <JFXComboBox layoutX="372.0" layoutY="22.0" prefHeight="26.0" prefWidth="79.0" />
+            <JFXComboBox fx:id="cb_room_number" layoutX="372.0" layoutY="22.0" prefHeight="26.0" prefWidth="79.0" />
             <Label layoutX="26.0" layoutY="80.0" text="Enter Date :">
                <font>
                   <Font size="16.0" />
@@ -116,20 +116,20 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <JFXDatePicker layoutX="198.0" layoutY="74.0" />
-            <JFXDatePicker layoutX="198.0" layoutY="131.0" />
+            <JFXDatePicker fx:id="enter_date" layoutX="198.0" layoutY="74.0" />
+            <JFXDatePicker fx:id="leave_date" layoutX="198.0" layoutY="131.0" />
          </children></Pane>
       <Label layoutX="570.0" layoutY="319.0" style="-fx-background-color: white;" text="Accomodation Information">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <ImageView fitHeight="61.0" fitWidth="67.0" layoutX="14.0" layoutY="531.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="img_back" fitHeight="61.0" fitWidth="67.0" layoutX="14.0" layoutY="531.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/back.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="61.0" fitWidth="67.0" layoutX="937.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="img_next" fitHeight="61.0" fitWidth="67.0" layoutX="937.0" layoutY="544.0" onMouseClicked="#next" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/back.png" />
          </image>
