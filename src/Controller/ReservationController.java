@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controller;
 
 import com.jfoenix.controls.JFXComboBox;
@@ -12,22 +7,19 @@ import com.jfoenix.controls.JFXTextField;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author micheal
- */
 public class ReservationController implements Initializable {
 
     @FXML
@@ -67,20 +59,20 @@ public class ReservationController implements Initializable {
     @FXML
     private ImageView img_next;
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        tf_number_children.setVisible(false);
         ToggleGroup tg = new ToggleGroup();
         rd_male.setToggleGroup(tg);
         rd_female.setToggleGroup(tg);
-        
-      
-    }    
+        cb_status.getItems().add("Single");
+        cb_status.getItems().add("Married");
+        cb_room_type.getItems().addAll("Single", "Double", "Trible");
+    }
 
     @FXML
     private void room_available(MouseEvent event) {
+
     }
 
     @FXML
@@ -100,6 +92,28 @@ public class ReservationController implements Initializable {
 
     @FXML
     private void next(MouseEvent event) {
+        if (isNull(tf_id) == true || tf_id.getText().length() != 14) {
+            System.out.println("NextNot");
+        }
+        if (isNull(tf_first) == true || tf_first.getText().matches("^[a-zA-Z]+$")) {
+            System.out.println("NextNot");
+        }
+        if (isNull(tf_last) == true) {
+
+        }
     }
-    
+
+    @FXML
+    private void status_action(ActionEvent event) {
+        if (cb_status.getValue() == "Single") {
+            tf_number_children.setVisible(false);
+        } else {
+            tf_number_children.setVisible(true);
+        }
+    }
+
+    private boolean isNull(TextField tf) {
+        return tf.getText().trim().isEmpty();
+    }
+
 }

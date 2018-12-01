@@ -56,7 +56,7 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <JFXComboBox fx:id="cb_status" layoutX="288.0" layoutY="110.0" prefHeight="26.0" prefWidth="170.0" />
+            <JFXComboBox fx:id="cb_status" layoutX="288.0" layoutY="110.0" onAction="#status_action" prefHeight="26.0" prefWidth="170.0" />
             <Label layoutX="21.0" layoutY="177.0" text="Number Of Children">
                <font>
                   <Font size="16.0" />

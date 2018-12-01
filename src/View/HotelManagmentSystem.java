@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class HotelManagmentSystem extends Application {
-
+    
     public static void main(String[] args) {
         launch(args);
     }
@@ -16,7 +16,7 @@ public class HotelManagmentSystem extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("Reservation.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("start.fxml"));
             Scene s = new Scene(parent);
             primaryStage.setScene(s);
             primaryStage.show();
