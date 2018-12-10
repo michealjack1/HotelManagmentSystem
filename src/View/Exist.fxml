@@ -3,52 +3,49 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ExistController">
    <children>
-      <Label layoutX="40.0" layoutY="44.0" prefHeight="21.0" prefWidth="122.0" text="Rom Number">
+      <Pane layoutX="37.0" layoutY="70.0" prefHeight="290.0" prefWidth="515.0" style="-fx-border-color: black; -fx-border-radius: 60;">
+         <children>
+            <Label layoutX="46.0" layoutY="30.0" text="Food">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="46.0" layoutY="90.0" text="Drink">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="46.0" layoutY="155.0" text="Trip">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="46.0" layoutY="220.0" text="Duration">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="edit_food" layoutX="300.0" layoutY="28.0" onAction="#food" text="edit" underline="true" />
+            <JFXButton fx:id="edit_drink" layoutX="300.0" layoutY="98.0" onAction="#drink" text="edit" underline="true" />
+            <JFXButton fx:id="edit_trip" layoutX="300.0" layoutY="153.0" onAction="#trip" text="edit" underline="true" />
+            <JFXButton fx:id="edit_duration" layoutX="300.0" layoutY="218.0" onAction="#duration" text="edit" underline="true" />
+         </children>
+      </Pane>
+      <Label layoutX="99.0" layoutY="28.0" prefHeight="28.0" prefWidth="112.0" text="Room Number">
          <font>
-            <Font size="17.0" />
+            <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lb_room_num" layoutX="255.0" layoutY="47.0" prefHeight="16.0" prefWidth="93.0">
+      <Label layoutX="306.0" layoutY="22.0" prefHeight="28.0" prefWidth="112.0">
          <font>
-            <Font size="17.0" />
+            <Font size="14.0" />
          </font>
       </Label>
-      <JFXButton fx:id="btn_edit_food" layoutX="255.0" layoutY="131.0" onAction="#edit_food" text="Edit" underline="true" wrapText="true" />
-      <Label layoutX="40.0" layoutY="133.0" prefHeight="21.0" prefWidth="122.0" text="Food">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
-      <Label layoutX="40.0" layoutY="214.0" prefHeight="21.0" prefWidth="122.0" text="Drink">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
-      <Label layoutX="40.0" layoutY="296.0" prefHeight="21.0" prefWidth="122.0" text="Trip">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
-      <JFXButton fx:id="btn_edit_drink" layoutX="255.0" layoutY="212.0" onAction="#edit_drink" text="Edit" underline="true" wrapText="true" />
-      <JFXButton fx:id="btn_edit_trip" layoutX="255.0" layoutY="294.0" onAction="#edit_trip" text="Edit" underline="true" wrapText="true" />
-      <Label fx:id="tf_food" alignment="CENTER" layoutX="330.0" layoutY="126.0" prefHeight="26.0" prefWidth="268.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
-      <Label fx:id="tf_drink" alignment="CENTER" layoutX="318.0" layoutY="212.0" prefHeight="26.0" prefWidth="268.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
-      <Label fx:id="tf_trip" alignment="CENTER" layoutX="330.0" layoutY="294.0" prefHeight="26.0" prefWidth="268.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
+      <JFXButton fx:id="btn_done" layoutX="521.0" layoutY="360.0" onAction="#done" text="Done" />
    </children>
 </AnchorPane>

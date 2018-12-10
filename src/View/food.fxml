@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FoodController">
+   <children>
+      <Pane layoutX="37.0" layoutY="35.0" prefHeight="321.0" prefWidth="526.0" style="-fx-border-color: #000000; -fx-border-radius: 40;">
+         <children>
+            <JFXCheckBox fx:id="ch_break_fast" layoutX="116.0" layoutY="61.0" text="Break Fast">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="ch_lunch" layoutX="116.0" layoutY="134.0" text="Lunch">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="ch_dinner" layoutX="116.0" layoutY="220.0" text="Dinner">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </JFXCheckBox>
+            <ImageView fx:id="img_next" fitHeight="56.0" fitWidth="65.0" layoutX="447.0" layoutY="251.0" onMouseClicked="#next" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/back.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img_back" fitHeight="56.0" fitWidth="65.0" layoutX="32.0" layoutY="251.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="92.0" layoutY="22.0" style="-fx-background-color: #ffffff;" text="Food">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

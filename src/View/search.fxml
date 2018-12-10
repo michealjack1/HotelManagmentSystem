@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SearchController">
+   <children>
+      <Pane layoutX="93.0" layoutY="37.0" prefHeight="298.0" prefWidth="413.0" style="-fx-border-color: black; -fx-border-radius: 50;">
+         <children>
+            <Label layoutX="36.0" layoutY="67.0" prefHeight="21.0" prefWidth="139.0" text="Enter Your ID : ">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXTextField layoutX="198.0" layoutY="62.0" />
+            <JFXButton fx:id="btn_login" layoutX="167.0" layoutY="201.0" onAction="#login" prefHeight="26.0" prefWidth="85.0" text="Login">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="img_back" fitHeight="69.0" fitWidth="71.0" layoutX="-86.0" layoutY="290.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

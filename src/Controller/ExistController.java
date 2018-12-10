@@ -6,14 +6,20 @@
 package Controller;
 
 import com.jfoenix.controls.JFXButton;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -22,61 +28,101 @@ import javafx.scene.layout.AnchorPane;
  */
 public class ExistController implements Initializable {
 
-    @FXML
-    private Label lb_room_num;
-    @FXML
-    private JFXButton btn_edit_food;
-    @FXML
-    private JFXButton btn_edit_drink;
-    @FXML
-    private JFXButton btn_edit_trip;
-    @FXML
     private Label tf_food;
-    @FXML
     private Label tf_drink;
-    @FXML
     private Label tf_trip;
     ComboBox<String> cb_food;
     ComboBox<String> cb_drink;
     ComboBox<String> cb_trip;
     @FXML
     private AnchorPane main_pane;
+    @FXML
+    private JFXButton edit_food;
+    @FXML
+    private JFXButton edit_drink;
+    @FXML
+    private JFXButton edit_trip;
+    @FXML
+    private JFXButton edit_duration;
+    @FXML
+    private JFXButton btn_done;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        cb_food = new ComboBox<>();
-        cb_drink = new ComboBox<>();
-        cb_trip = new ComboBox<>();
-        cb_drink.setStyle("-fx-font-size:17px;-fx-pref-width: 268;");
-        cb_food.setStyle("-fx-font-size:17px;-fx-pref-width: 268;");
-        cb_trip.setStyle("-fx-font-size:17px;-fx-pref-width: 268;");
+        
+//        cb_trip.setStyle("-fx-font-size:17px;-fx-pref-width: 268;");
     }    
 
     @FXML
-    private void edit_food(ActionEvent event) {
-        main_pane.getChildren().removeAll(tf_food);
-        cb_food.setLayoutX(330.0);
-        cb_food.setLayoutY(126.0);
-        main_pane.getChildren().add(cb_food);
+    private void food(ActionEvent event) {
+         Pane p = new Pane();
+        try {
+            p = FXMLLoader.load(getClass().getResource("../View/food.fxml"));
+            Scene scene = new Scene(p);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.show();
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+            System.out.println("File Not Found");
+        }
     }
 
     @FXML
-    private void edit_drink(ActionEvent event) {
-        main_pane.getChildren().removeAll(tf_drink);
-        cb_drink.setLayoutX(330.0);
-        cb_drink.setLayoutY(212.0);
-        main_pane.getChildren().add(cb_drink);
+    private void drink(ActionEvent event) {
+         Pane p = new Pane();
+        try {
+            p = FXMLLoader.load(getClass().getResource("../View/drink.fxml"));
+            Scene scene = new Scene(p);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.show();
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+            System.out.println("File Not Found");
+        }
     }
 
     @FXML
-    private void edit_trip(ActionEvent event) {
-        main_pane.getChildren().remove(tf_trip);
-        cb_trip.setLayoutX(330.0);
-        cb_trip.setLayoutY(294.0);
-        main_pane.getChildren().add(cb_trip);
+    private void trip(ActionEvent event) {
+         Pane p = new Pane();
+        try {
+            p = FXMLLoader.load(getClass().getResource("../View/Trip.fxml"));
+            Scene scene = new Scene(p);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.show();
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+            System.out.println("File Not Found");
+        }
+    }
+
+    @FXML
+    private void duration(ActionEvent event) {
+          Pane p = new Pane();
+        try {
+            p = FXMLLoader.load(getClass().getResource("../View/EditDuration.fxml"));
+            Scene scene = new Scene(p);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.show();
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+            System.out.println("File Not Found");
+        }
+    }
+
+    @FXML
+    private void done(ActionEvent event) {
+        System.exit(0);
     }
     
 }

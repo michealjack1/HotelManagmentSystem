@@ -93,14 +93,27 @@ public class ReservationController implements Initializable {
     @FXML
     private void next(MouseEvent event) {
         if (isNull(tf_id) == true || tf_id.getText().length() != 14) {
-            System.out.println("NextNot");
+//            System.out.println("NextNot");
         }
         if (isNull(tf_first) == true || tf_first.getText().matches("^[a-zA-Z]+$")) {
-            System.out.println("NextNot");
+//            System.out.println("NextNot");
         }
         if (isNull(tf_last) == true) {
 
         }
+        
+          Pane p = new Pane();
+            try {
+                p = FXMLLoader.load(getClass().getResource("../View/food.fxml"));
+                Scene scene = new Scene(p);
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(scene);
+                stage.setResizable(false);
+                stage.show();
+            } catch (IOException ex) {
+                System.out.println(ex.getMessage());
+            }
+        
     }
 
     @FXML
