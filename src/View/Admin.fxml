@@ -29,87 +29,87 @@
       </Pane>
       <Pane fx:id="emp_pane" layoutX="84.0" layoutY="-8.0" prefHeight="414.0" prefWidth="1118.0" visible="false">
          <children>
-            <TableView layoutX="2.0" layoutY="73.0" prefHeight="344.0" prefWidth="903.0">
+            <TableView fx:id="tv_emp" layoutX="2.0" layoutY="73.0" prefHeight="344.0" prefWidth="903.0">
               <columns>
-                <TableColumn prefWidth="126.0" text="Name" />
-                <TableColumn prefWidth="93.0" text="ID" />
-                  <TableColumn prefWidth="58.0" text="Salary" />
-                  <TableColumn prefWidth="38.0" text="age" />
-                  <TableColumn prefWidth="87.0" text="phone" />
-                  <TableColumn prefWidth="253.0" text="Email" />
-                  <TableColumn prefWidth="90.0" text="Gender" />
-                  <TableColumn prefWidth="164.0" text="User Name" />
+                <TableColumn fx:id="name_emp" prefWidth="126.0" text="Name" />
+                <TableColumn fx:id="id_emp" prefWidth="93.0" text="ID" />
+                  <TableColumn fx:id="salary_emp" prefWidth="58.0" text="Salary" />
+                  <TableColumn fx:id="age_emp" prefWidth="38.0" text="age" />
+                  <TableColumn fx:id="phone_emp" prefWidth="87.0" text="phone" />
+                  <TableColumn fx:id="email_emp" prefWidth="253.0" text="Email" />
+                  <TableColumn fx:id="gender_emp" prefWidth="90.0" text="Gender" />
+                  <TableColumn fx:id="username_emp" prefWidth="164.0" text="User Name" />
               </columns>
             </TableView>
-            <JFXTextField layoutX="370.0" layoutY="27.0">
+            <JFXTextField fx:id="search_emp" layoutX="370.0" layoutY="27.0" onKeyReleased="#search_emp">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXComboBox layoutX="690.0" layoutY="33.0" prefHeight="26.0" prefWidth="135.0" promptText="Filter" />
+            <JFXComboBox fx:id="cmb_emp" layoutX="690.0" layoutY="33.0" onAction="#combo_action" prefHeight="26.0" prefWidth="135.0" promptText="Filter" />
             <ImageView fitHeight="59.0" fitWidth="79.0" layoutX="276.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Images/search.png" />
                </image>
             </ImageView>
-            <JFXTextField layoutX="921.0" layoutY="73.0" promptText="Name" />
-            <JFXTextField layoutX="921.0" layoutY="132.0" promptText="age" />
-            <JFXTextField layoutX="921.0" layoutY="191.0" promptText="Email" />
-            <JFXTextField layoutX="921.0" layoutY="256.0" promptText="salary" />
-            <JFXTextField layoutX="921.0" layoutY="307.0" promptText="phone" />
-            <JFXButton disable="true" layoutX="1025.0" layoutY="361.0" text="Update" />
-            <JFXButton disable="true" layoutX="940.0" layoutY="361.0" text="Delete" />
+            <JFXTextField fx:id="name_update_emp" editable="false" layoutX="921.0" layoutY="119.0" promptText="User Name" />
+            <JFXTextField fx:id="age_update_emp" editable="false" layoutX="921.0" layoutY="166.0" promptText="age" />
+            <JFXTextField fx:id="email_update_emp" editable="false" layoutX="921.0" layoutY="207.0" promptText="Email" />
+            <JFXTextField fx:id="salary_update_emp" editable="false" layoutX="921.0" layoutY="253.0" promptText="salary" />
+            <JFXTextField fx:id="phone__update_emp" editable="false" layoutX="921.0" layoutY="302.0" promptText="phone" />
+            <JFXButton fx:id="btn_update_emp" disable="true" layoutX="1025.0" layoutY="361.0" onAction="#update_emp" text="Update" />
+            <JFXButton fx:id="btn_delete_emp" disable="true" layoutX="940.0" layoutY="361.0" onAction="#delete_emp" text="Delete" />
+            <JFXTextField fx:id="id_update_emp" editable="false" layoutX="915.0" layoutY="73.0" promptText="ID" />
          </children>
       </Pane>
       <Pane fx:id="guest_pane" layoutX="88.0" prefHeight="408.0" prefWidth="1118.0" visible="false">
          <children>
-            <TableView layoutX="-7.0" layoutY="64.0" prefHeight="344.0" prefWidth="910.0">
+            <TableView fx:id="tv_guest" layoutX="-7.0" layoutY="64.0" prefHeight="344.0" prefWidth="910.0">
               <columns>
-                <TableColumn prefWidth="92.00003051757812" text="ID" />
-                <TableColumn prefWidth="119.0" text="Name" />
-                  <TableColumn prefWidth="83.0" text="Phone" />
-                  <TableColumn prefWidth="85.0" text="num_Child" />
-                  <TableColumn prefWidth="54.0" text="Status" />
-                  <TableColumn prefWidth="171.0" text="Email" />
-                  <TableColumn prefWidth="62.0" text="Gender" />
-                  <TableColumn prefWidth="74.0" text="Country" />
-                  <TableColumn prefWidth="89.0" text="Room_ID" />
-                  <TableColumn prefWidth="71.0" text="Saty" />
+                <TableColumn fx:id="tc_guest_id" prefWidth="92.00003051757812" text="ID" />
+                <TableColumn fx:id="tc_guest_name" prefWidth="119.0" text="Name" />
+                  <TableColumn fx:id="tc_guest_phone" prefWidth="83.0" text="Phone" />
+                  <TableColumn fx:id="tc_guest_num_child" prefWidth="85.0" text="num_Child" />
+                  <TableColumn fx:id="tc_guest_status" prefWidth="54.0" text="Status" />
+                  <TableColumn fx:id="tc_guest_email" prefWidth="159.0" text="Email" />
+                  <TableColumn fx:id="tc_guest_gender" prefWidth="74.0" text="Gender" />
+                  <TableColumn fx:id="tc_guest_country" prefWidth="74.0" text="Country" />
+                  <TableColumn fx:id="tc_guest_room_id" prefWidth="74.0" text="Room_ID" />
+                  <TableColumn fx:id="tc_guest_stay" prefWidth="94.0" text="Leave Date" />
               </columns>
             </TableView>
-            <JFXTextField layoutX="403.0" layoutY="21.0">
+            <JFXTextField fx:id="tf_search_guest" layoutX="403.0" layoutY="21.0" onKeyReleased="#search_guest">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXComboBox layoutX="670.0" layoutY="25.0" prefHeight="26.0" prefWidth="135.0" promptText="Filter" />
+            <JFXComboBox fx:id="cmb_filter_guest" layoutX="670.0" layoutY="25.0" onAction="#Combo_guest_action" prefHeight="26.0" prefWidth="135.0" promptText="Filter" />
             <ImageView fitHeight="59.0" fitWidth="79.0" layoutX="313.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Images/search.png" />
                </image>
             </ImageView>
-            <JFXButton disable="true" layoutX="1025.0" layoutY="362.0" text="Update" />
-            <JFXTextField layoutX="921.0" layoutY="64.0" promptText="Name" />
-            <JFXTextField layoutX="921.0" layoutY="120.0" promptText="Phone" />
-            <JFXTextField layoutX="921.0" layoutY="163.0" promptText="Email" />
-            <JFXTextField layoutX="921.0" layoutY="213.0" promptText="ID" />
-            <JFXTextField layoutX="921.0" layoutY="258.0" promptText="Country" />
-            <JFXTextField layoutX="921.0" layoutY="311.0" promptText="Num Child" />
-            <JFXButton disable="true" layoutX="940.0" layoutY="362.0" text="Dalete" />
+            <JFXButton fx:id="btn_update_guest" disable="true" layoutX="1000.0" layoutY="362.0" onAction="#update_guest" text="Update" />
+            <JFXTextField fx:id="tf_guest_name" editable="false" layoutX="915.0" layoutY="204.0" promptText="Name" />
+            <JFXTextField fx:id="tf_guest_phone" editable="false" layoutX="921.0" layoutY="111.0" promptText="Phone" />
+            <JFXTextField fx:id="tf_guest_email" editable="false" layoutX="921.0" layoutY="159.0" promptText="Email" />
+            <JFXTextField fx:id="tf_guest_id" editable="false" layoutX="921.0" layoutY="64.0" promptText="ID" />
+            <JFXTextField fx:id="tf_guest_country" editable="false" layoutX="915.0" layoutY="249.0" promptText="Country" />
+            <JFXTextField fx:id="tf_guest_num_child" editable="false" layoutX="915.0" layoutY="297.0" promptText="Duration" />
+            <JFXButton fx:id="btn_delete_guest" disable="true" layoutX="915.0" layoutY="362.0" onAction="#delete_guest" text="Dalete" />
          </children>
       </Pane>
       <Pane fx:id="room_pane" layoutX="84.0" layoutY="-5.0" prefHeight="414.0" prefWidth="1118.0" visible="false">
          <children>
-            <TableView layoutY="70.0" prefHeight="344.0" prefWidth="910.0">
+            <TableView fx:id="tv_room" layoutY="70.0" prefHeight="344.0" prefWidth="910.0">
               <columns>
-                <TableColumn prefWidth="137.0" text="Guest_ID" />
-                <TableColumn prefWidth="135.0" text="Room_num" />
-                  <TableColumn prefWidth="138.0" text="Room_type" />
-                  <TableColumn prefWidth="91.0" text="Food_cost" />
-                  <TableColumn prefWidth="107.0" text="Drink_cost" />
-                  <TableColumn prefWidth="103.0" text="trip_cost" />
-                  <TableColumn prefWidth="100.0" text="Room_cost" />
-                  <TableColumn prefWidth="98.0" text="Available" />
+                <TableColumn fx:id="ct_room_num" prefWidth="135.0" text="Room_num" />
+                  <TableColumn fx:id="ct_room_type" prefWidth="138.0" text="Room_type" />
+                  <TableColumn fx:id="ct_room_food" prefWidth="135.0" text="Food_cost" />
+                  <TableColumn fx:id="ct_room_drink" prefWidth="112.0" text="Drink_cost" />
+                  <TableColumn fx:id="trip" prefWidth="128.0" text="trip_cost" />
+                  <TableColumn fx:id="ct_room_total" prefWidth="136.0" text="Total_cost" />
+                  <TableColumn fx:id="ct_room_available" prefWidth="125.0" text="Available" />
               </columns>
             </TableView>
             <ImageView fitHeight="59.0" fitWidth="79.0" layoutX="340.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
@@ -117,32 +117,34 @@
                   <Image url="@../Images/search.png" />
                </image>
             </ImageView>
-            <JFXComboBox layoutX="714.0" layoutY="27.0" prefHeight="26.0" prefWidth="135.0" promptText="Filter" />
-            <JFXTextField layoutX="454.0" layoutY="19.0">
+            <JFXComboBox fx:id="cmb_filter_room" layoutX="714.0" layoutY="27.0" onAction="#combo_action_room" prefHeight="26.0" prefWidth="135.0" promptText="Filter" />
+            <JFXTextField fx:id="tf_search_room" layoutX="454.0" layoutY="19.0" onKeyReleased="#tf_room_search">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXTextField layoutX="923.0" layoutY="86.0" promptText="Room_Cost" />
-            <JFXTextField layoutX="923.0" layoutY="148.0" promptText="Available" />
-            <JFXButton disable="true" layoutX="977.0" layoutY="242.0" text="Update" />
+            <JFXTextField fx:id="tf_room_cost" editable="false" layoutX="922.0" layoutY="132.0" promptText="Room_Cost" />
+            <JFXTextField fx:id="tf_room_available" editable="false" layoutX="922.0" layoutY="198.0" promptText="Available" />
+            <JFXButton fx:id="btn_update_room" disable="true" layoutX="975.0" layoutY="295.0" onAction="#btn_update_room_action" text="Update" />
+            <JFXTextField fx:id="tf_room_id" editable="false" layoutX="922.0" layoutY="70.0" promptText="Room ID" />
          </children>
       </Pane>
       <Pane fx:id="new_emp_pane" layoutX="84.0" prefHeight="405.0" prefWidth="910.0" visible="false">
          <children>
-            <JFXTextField layoutX="62.0" layoutY="33.0" promptText="First name" />
-            <JFXTextField layoutX="423.0" layoutY="33.0" promptText="last name" />
-            <JFXTextField layoutX="62.0" layoutY="141.0" promptText="phone" />
-            <JFXTextField layoutX="423.0" layoutY="141.0" promptText="Gender" />
-            <JFXTextField layoutX="62.0" layoutY="237.0" promptText="Email" />
-            <JFXTextField layoutX="433.0" layoutY="237.0" promptText="age" />
-            <JFXTextField layoutX="62.0" layoutY="340.0" promptText="user Name" />
-            <JFXTextField layoutX="433.0" layoutY="356.0" promptText="ID" />
-            <JFXButton layoutX="730.0" layoutY="353.0" text="Enter">
+            <JFXTextField fx:id="emp_first_name" layoutX="62.0" layoutY="33.0" promptText="First name" />
+            <JFXTextField fx:id="emp_last_name" layoutX="423.0" layoutY="33.0" promptText="last name" />
+            <JFXTextField fx:id="emp_phone" layoutX="62.0" layoutY="141.0" promptText="phone" />
+            <JFXTextField fx:id="emp_email" layoutX="62.0" layoutY="237.0" promptText="Email" />
+            <JFXTextField fx:id="emp_age" layoutX="423.0" layoutY="237.0" promptText="age" />
+            <JFXTextField fx:id="emp_user_name" layoutX="62.0" layoutY="341.0" promptText="user Name" />
+            <JFXTextField fx:id="emp_id" layoutX="423.0" layoutY="141.0" promptText="ID" />
+            <JFXButton fx:id="addEmp" layoutX="730.0" layoutY="353.0" onAction="#AddEmp" text="Enter">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXButton>
+            <JFXComboBox fx:id="cmb_gender_emb" layoutX="446.0" layoutY="340.0" prefHeight="26.0" prefWidth="124.0" />
+            <JFXTextField fx:id="emp_salary" layoutX="662.0" layoutY="33.0" promptText="salary" />
          </children>
       </Pane>
       <Pane fx:id="pane2" layoutX="-1.0" layoutY="75.0" prefHeight="79.0" prefWidth="82.0" style="-fx-background-color: #3f4144;">

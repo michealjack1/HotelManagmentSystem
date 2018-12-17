@@ -40,7 +40,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <JFXTextField labelFloat="true" promptText="USERNAME" GridPane.columnIndex="1" />
+                  <JFXTextField fx:id="tf_user_name" labelFloat="true" promptText="USERNAME" GridPane.columnIndex="1" />
                   <ImageView fitHeight="29.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../Images/email_black.png" />
@@ -51,11 +51,10 @@
                         <Image url="@../Images/Security-Password.png" />
                      </image>
                   </ImageView>
-                  <JFXPasswordField labelFloat="true" prefWidth="157.0" promptText="PASSWORD" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXPasswordField fx:id="tf_pass" labelFloat="true" prefWidth="157.0" promptText="PASSWORD" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
             </GridPane>
-            <JFXButton id="btn" fx:id="btn_signup" layoutX="36.0" layoutY="285.0" onAction="#signup_action" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #008000; -fx-background-radius: 60;" text="SIGNUP" textFill="#d3e6eb" />
-            <JFXButton id="btn" fx:id="btn_login" layoutX="146.0" layoutY="285.0" onAction="#login_action" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #008000; -fx-background-radius: 60;" text="LOGIN" textFill="#d3e6eb" />
+            <JFXButton id="btn" fx:id="btn_login" layoutX="93.0" layoutY="296.0" onAction="#login_action" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #008000; -fx-background-radius: 60;" text="LOGIN" textFill="#d3e6eb" />
          </children>
       </Pane>
    </children>

@@ -35,8 +35,6 @@ public class ReservationController implements Initializable {
     @FXML
     private JFXTextField tf_address;
     @FXML
-    private JFXComboBox<String> cb_country;
-    @FXML
     private JFXComboBox<String> cb_status;
     @FXML
     private JFXTextField tf_number_adult;
@@ -53,11 +51,13 @@ public class ReservationController implements Initializable {
     @FXML
     private JFXDatePicker enter_date;
     @FXML
-    private JFXDatePicker leave_date;
-    @FXML
     private ImageView img_back;
     @FXML
     private ImageView img_next;
+    @FXML
+    private JFXTextField tf_country;
+    @FXML
+    private JFXTextField tf_number_adult1;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -92,15 +92,7 @@ public class ReservationController implements Initializable {
 
     @FXML
     private void next(MouseEvent event) {
-        if (isNull(tf_id) == true || tf_id.getText().length() != 14) {
-//            System.out.println("NextNot");
-        }
-        if (isNull(tf_first) == true || tf_first.getText().matches("^[a-zA-Z]+$")) {
-//            System.out.println("NextNot");
-        }
-        if (isNull(tf_last) == true) {
-
-        }
+      
         
           Pane p = new Pane();
             try {

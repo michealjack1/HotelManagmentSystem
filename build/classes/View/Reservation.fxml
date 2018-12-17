@@ -50,7 +50,6 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <JFXComboBox fx:id="cb_country" layoutX="288.0" layoutY="31.0" prefHeight="26.0" prefWidth="170.0" />
             <Label layoutX="34.0" layoutY="113.0" text="Status  :">
                <font>
                   <Font size="16.0" />
@@ -69,6 +68,7 @@
             </Label>
             <JFXTextField fx:id="tf_number_children" layoutX="288.0" layoutY="171.0" />
             <JFXTextField fx:id="tf_number_adult" layoutX="288.0" layoutY="222.0" />
+            <JFXTextField fx:id="tf_country" layoutX="288.0" layoutY="38.0" />
          </children>
       </Pane>
       <Pane layoutX="14.0" layoutY="327.0" prefHeight="125.0" prefWidth="493.0" style="-fx-border-color: black;">
@@ -111,13 +111,13 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="26.0" layoutY="137.0" text="Leave Date :">
+            <Label layoutX="26.0" layoutY="137.0" text="Duration : ">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
             <JFXDatePicker fx:id="enter_date" layoutX="198.0" layoutY="74.0" />
-            <JFXDatePicker fx:id="leave_date" layoutX="198.0" layoutY="131.0" />
+            <JFXTextField fx:id="tf_number_adult1" layoutX="198.0" layoutY="131.0" />
          </children></Pane>
       <Label layoutX="570.0" layoutY="319.0" style="-fx-background-color: white;" text="Accomodation Information">
          <font>
